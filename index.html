@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="./assets/Mixi Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng trực tuyến</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/Mixi Logo.png" alt="Cửa hàng Mixi Logo" width="30" height="30"
+                        class="d-inline-block align-top me-2">
+                    Cửa hàng Mixi
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Trang chủ</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#saleoff"><i class="bi bi-tag"></i> Khuyến
+                                mãi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categories"><i class="bi bi-grid"></i> Danh
+                                mục</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope"></i> Liên
+                                hệ</a></li>
+                    </ul>
+                </div>
+                <div class="ms-3">
+                    <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-cart"></i></a>
+                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-person-circle"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="container my-5">
+            <div class="banner">
+                <!-- Băng rôn chính sẽ được thêm vào đây -->
+            </div>
+
+            <div class="categories my-5">
+                <h2 class="text-center mb-4">Danh mục sản phẩm</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/items/item-20.png" class="card-img-top" alt="Điện tử" style="object-fit: cover; height: 100%; width: 100%;">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Điện tử</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/items/item-22.png" class="card-img-top" alt="Thời trang" style="object-fit: cover; height: 100%; width: 100%;">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Thời trang</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/items/item-19.png" class="card-img-top" alt="Đồ gia dụng" style="object-fit: cover; height: 100%; width: 100%;">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Đồ gia dụng</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-products my-5">
+                <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+                <div class="row">
+                    <!-- Sản phẩm nổi bật sẽ được thêm vào đây -->
+                    <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="card h-100">
+                                            <img src="./assets/items/item-1.png" class="card-img-top" alt="Featured Product 1">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Sản phẩm 1</h5>
+                                                <p class="card-text">Mô tả ngắn về sản phẩm 1</p>
+                                                <p class="card-text"><strong>Giá: 100.000đ</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card h-100">
+                                            <img src="./assets/items/item-2.png" class="card-img-top" alt="Featured Product 2">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Sản phẩm 2</h5>
+                                                <p class="card-text">Mô tả ngắn về sản phẩm 2</p>
+                                                <p class="card-text"><strong>Giá: 150.000đ</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card h-100">
+                                            <img src="./assets/items/item-3.png" class="card-img-top" alt="Featured Product 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Sản phẩm 3</h5>
+                                                <p class="card-text">Mô tả ngắn về sản phẩm 3</p>
+                                                <p class="card-text"><strong>Giá: 200.000đ</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card h-100">
+                                            <img src="./assets/items/item-4.png" class="card-img-top" alt="Featured Product 4">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Sản phẩm 4</h5>
+                                                <p class="card-text">Mô tả ngắn về sản phẩm 4</p>
+                                                <p class="card-text"><strong>Giá: 250.000đ</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more carousel-item divs here for additional sets of 4 products -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promotions my-5">
+                <h2 class="text-center mb-4" id="saleoff">Khuyến mãi</h2>
+                <!-- Thông tin khuyến mãi sẽ được thêm vào đây -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Giảm giá 20%</h5>
+                                <p class="card-text">Cho tất cả sản phẩm áo thun</p>
+                                <a href="#" class="btn btn-primary">Xem ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Mua 2 tặng 1</h5>
+                                <p class="card-text">Áp dụng cho phụ kiện</p>
+                                <a href="#" class="btn btn-primary">Xem ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Freeship</h5>
+                                <p class="card-text">Cho đơn hàng từ 500.000đ</p>
+                                <a href="#" class="btn btn-primary">Xem ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="container my-5">
+            <h2 class="text-center mb-4" id="categories">Danh mục sản phẩm</h2>
+            <div class="filter mb-3">
+                <!-- Bộ lọc sản phẩm sẽ được thêm vào đây -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <select class="form-select" id="category-filter">
+                            <option selected>Danh mục</option>
+                            <option value="1">Điện tử</option>
+                            <option value="2">Thời trang</option>
+                            <option value="3">Đồ gia dụng</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <select class="form-select" id="price-filter">
+                            <option selected>Giá</option>
+                            <option value="1">Dưới 500.000đ</option>
+                            <option value="2">500.000đ - 1.000.000đ</option>
+                            <option value="3">Trên 1.000.000đ</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <select class="form-select" id="brand-filter">
+                            <option selected>Thương hiệu</option>
+                            <option value="1">Samsung</option>
+                            <option value="2">Apple</option>
+                            <option value="3">Nike</option>
+                            <option value="4">Adidas</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <button class="btn btn-primary w-100" id="apply-filter">Áp dụng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="search mb-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+                    <button class="btn btn-primary" type="button">Tìm kiếm</button>
+                </div>
+            </div>
+            <div class="row" id="product-grid">
+                <!-- Điện tử -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-4.png" class="card-img-top" alt="Laptop" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Laptop</h5>
+                            <p class="card-text flex-grow-1">Laptop hiệu năng cao, phù hợp cho công việc và giải trí</p>
+                            <p class="card-text"><strong>Giá: 15.000.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-5.png" class="card-img-top" alt="Smartphone" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Smartphone</h5>
+                            <p class="card-text flex-grow-1">Điện thoại thông minh với camera chất lượng cao</p>
+                            <p class="card-text"><strong>Giá: 8.000.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-6.png" class="card-img-top" alt="Tai nghe" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tai nghe không dây</h5>
+                            <p class="card-text flex-grow-1">Tai nghe bluetooth với chất lượng âm thanh tuyệt vời</p>
+                            <p class="card-text"><strong>Giá: 2.500.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thời trang -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-7.png" class="card-img-top" alt="Áo thun" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Áo thun nam</h5>
+                            <p class="card-text flex-grow-1">Áo thun cotton thoáng mát, nhiều màu sắc</p>
+                            <p class="card-text"><strong>Giá: 250.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-8.png" class="card-img-top" alt="Quần jean" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Quần jean nữ</h5>
+                            <p class="card-text flex-grow-1">Quần jean ôm dáng, co giãn thoải mái</p>
+                            <p class="card-text"><strong>Giá: 450.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-9.png" class="card-img-top" alt="Giày thể thao" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Giày thể thao</h5>
+                            <p class="card-text flex-grow-1">Giày thể thao nhẹ, êm chân, phù hợp cho chạy bộ</p>
+                            <p class="card-text"><strong>Giá: 800.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đồ gia dụng -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-10.png" class="card-img-top" alt="Nồi cơm điện" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Nồi cơm điện</h5>
+                            <p class="card-text flex-grow-1">Nồi cơm điện đa năng, dung tích 1.8L</p>
+                            <p class="card-text"><strong>Giá: 1.200.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-11.png" class="card-img-top" alt="Máy lọc không khí" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Máy lọc không khí</h5>
+                            <p class="card-text flex-grow-1">Máy lọc không khí hiệu suất cao, phù hợp cho phòng 30m2</p>
+                            <p class="card-text"><strong>Giá: 3.500.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+                            <img src="./assets/items/item-12.png" class="card-img-top" alt="Bàn ủi hơi nước" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bàn ủi hơi nước</h5>
+                            <p class="card-text flex-grow-1">Bàn ủi hơi nước tiện lợi, dễ sử dụng</p>
+                            <p class="card-text"><strong>Giá: 600.000đ</strong></p>
+                            <a href="#" class="btn btn-primary mt-auto">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container my-5">
+            <h2 class="text-center mb-4" id="contact">Liên hệ với chúng tôi</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Họ và tên" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" placeholder="Tin nhắn" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Gửi</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <p><i class="bi bi-geo-alt"></i> Địa chỉ: 828 đường Sư Vạn Hạnh</p>
+                        <p><i class="bi bi-telephone"></i> Điện thoại: (+84) 091823311</p>
+                        <p><i class="bi bi-envelope"></i> Email: mixishopping@gmail.com</p>
+                    </div>
+                    <div id="map" class="mt-3">
+                        <!-- Google Maps sẽ được tích hợp ở đây -->
+                    </div>
+                    <div class="social-media mt-3">
+                        <a href="#" target="_blank" class="btn btn-outline-primary me-2"><i class="bi bi-facebook"></i>
+                            Facebook</a>
+                        <a href="#" target="_blank" class="btn btn-outline-danger me-2"><i class="bi bi-instagram"></i>
+                            Instagram</a>
+                        <a href="#" target="_blank" class="btn btn-outline-info"><i class="bi bi-twitter"></i>
+                            Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Cửa hàng Mixi. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
