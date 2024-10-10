@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="./assets/Mixi Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/Mixi Logo.png" alt="Cửa hàng Mixi Logo" width="30" height="30"
+                        class="d-inline-block align-top me-2">
+                    Cửa hàng Mixi
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-tag"></i> Khuyến mãi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-grid"></i> Danh mục</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-envelope"></i> Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="ms-3">
+                    <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-cart"></i></a>
+                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-person-circle"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h1 class="mb-4">Giỏ hàng của bạn</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="./assets/items/item-1.png" class="img-fluid" alt="Sản phẩm 1">
+                            </div>
+                            <div class="col-md-9">
+                                <h5 class="card-title">Sản phẩm 1</h5>
+                                <p class="card-text">Mô tả ngắn gọn về sản phẩm 1</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="input-group" style="width: 120px;">
+                                        <button class="btn btn-outline-secondary" type="button">-</button>
+                                        <input type="text" class="form-control text-center" value="1">
+                                        <button class="btn btn-outline-secondary" type="button">+</button>
+                                    </div>
+                                    <p class="mb-0"><strong>1.000.000đ</strong></p>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="./assets/items/item-2.png" class="img-fluid" alt="Sản phẩm 2">
+                            </div>
+                            <div class="col-md-9">
+                                <h5 class="card-title">Sản phẩm 2</h5>
+                                <p class="card-text">Mô tả ngắn gọn về sản phẩm 2</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="input-group" style="width: 120px;">
+                                        <button class="btn btn-outline-secondary" type="button">-</button>
+                                        <input type="text" class="form-control text-center" value="1">
+                                        <button class="btn btn-outline-secondary" type="button">+</button>
+                                    </div>
+                                    <p class="mb-0"><strong>1.500.000đ</strong></p>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tổng giỏ hàng</h5>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Tạm tính:</span>
+                            <span><strong>2.500.000đ</strong></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Phí vận chuyển:</span>
+                            <span><strong>30.000đ</strong></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Tổng cộng:</span>
+                            <span><strong>2.530.000đ</strong></span>
+                        </div>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#purchaseModal">Tiến hành thanh toán</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="purchaseModalLabel">Xác nhận mua hàng</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="purchaseForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Địa chỉ giao hàng</label>
+                                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="paymentMethod" class="form-label">Phương thức thanh toán</label>
+                                    <select class="form-select" id="paymentMethod" required>
+                                        <option value="">Chọn phương thức thanh toán</option>
+                                        <option value="cod">Thanh toán khi nhận hàng</option>
+                                        <option value="bank">Chuyển khoản ngân hàng</option>
+                                        <option value="card">Thẻ tín dụng/Ghi nợ</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                            <button type="submit" form="purchaseForm" class="btn btn-primary">Xác nhận mua hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Cửa hàng Mixi. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
