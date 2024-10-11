@@ -6,7 +6,9 @@
     <link rel="icon" type="image/png" href="./assets/Mixi Logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cửa hàng trực tuyến</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +20,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="./assets/Mixi Logo.png" alt="Cửa hàng Mixi Logo" width="30" height="30"
                         class="d-inline-block align-top me-2">
                     Cửa hàng Mixi
@@ -29,18 +31,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Trang chủ</a>
+                        <li class="nav-item"><a class="nav-link" href="index.html#home"><i class="bi bi-house-door"></i>
+                                Trang chủ</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#saleoff"><i class="bi bi-tag"></i> Khuyến
+                        <li class="nav-item"><a class="nav-link" href="index.html#saleoff"><i class="bi bi-tag"></i>
+                                Khuyến
                                 mãi</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#categories"><i class="bi bi-grid"></i> Danh
+                        <li class="nav-item"><a class="nav-link" href="index.html#categories"><i class="bi bi-grid"></i>
+                                Danh
                                 mục</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope"></i> Liên
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact"><i
+                                    class="bi bi-envelope"></i> Liên
                                 hệ</a></li>
                     </ul>
                 </div>
                 <div class="ms-3">
-                    <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-cart"></i></a>
+                    <a href="card.html" class="btn btn-outline-primary me-2"><i class="bi bi-cart"></i></a>
                     <a href="#" class="btn btn-outline-secondary"><i class="bi bi-person-circle"></i></a>
                 </div>
             </div>
@@ -50,15 +56,20 @@
     <main class="container my-5">
         <div class="row">
             <div class="col-md-6">
-                <img src="./assets/items/item-1.png" class="img-fluid" alt="Product Image">
+                <img src="./assets/items/fashion/ao-cotton-vai-gan.png" class="img-fluid" alt="Product Image">
             </div>
             <div class="col-md-6">
-                <h1 class="mb-4">Tên sản phẩm</h1>
-                <p class="lead mb-4">Mô tả ngắn gọn về sản phẩm</p>
-                <h2 class="mb-3">Giá: 1.000.000đ</h2>
-                <p class="mb-4">Mô tả chi tiết về sản phẩm. Đây là nơi bạn có thể cung cấp thông tin đầy đủ về sản phẩm,
-                    bao gồm các tính năng, thông số kỹ thuật, và bất kỳ thông tin quan trọng nào khác mà khách hàng cần
-                    biết.</p>
+                <h1 class="mb-4">Áo cotton vải gân</h1>
+                <p class="lead mb-4">Uniqlo</p>
+                <h2 class="mb-3">Giá: 200.000đ</h2>
+                <p class="mb-4">
+                    Áo cotton vải gân là một sản phẩm thời trang cơ bản và đa năng, phù hợp cho mọi dịp. Được làm từ
+                    chất liệu cotton 100% cao cấp với cấu trúc vải gân đặc trưng, áo mang lại cảm giác thoải mái, mềm
+                    mại và thoáng khí cho người mặc. Thiết kế đơn giản nhưng tinh tế với đường may chắc chắn, áo có thể
+                    dễ dàng kết hợp với nhiều loại trang phục khác nhau. Sản phẩm có nhiều màu sắc để lựa chọn, phù hợp
+                    cho cả nam và nữ ở mọi lứa tuổi. Đây là một item không thể thiếu trong tủ đồ của bạn, đặc biệt thích
+                    hợp cho những ngày thời tiết mát mẻ hoặc làm lớp áo trong cho outfit mùa đông.
+                </p>
                 <div class="mb-4">
                     <h3 class="mb-3">Số lượng:</h3>
                     <div class="input-group" style="width: 150px;">
@@ -66,6 +77,15 @@
                         <input type="number" class="form-control text-center" value="1" min="1" id="quantity">
                         <button class="btn btn-outline-secondary" type="button" id="increase">+</button>
                     </div>
+                </div>
+                <div class="mb-4">
+                    <h3 class="mb-3">Mã giảm giá:</h3>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Nhập mã giảm giá" id="voucherCode">
+                        <button class="btn btn-outline-secondary" type="button" onclick="applyVoucher()">Áp
+                            dụng</button>
+                    </div>
+                    <small id="voucherMessage" class="form-text text-muted"></small>
                 </div>
                 <button class="btn btn-primary btn-lg mb-4">Thêm vào giỏ hàng</button>
                 <h3 class="mb-3">Thông số kỹ thuật:</h3>
@@ -76,6 +96,36 @@
                     <li><strong>Tình trạng:</strong> Còn hàng</li>
                 </ul>
             </div>
+            <div class="mt-4">
+                <h3 class="mb-3">Đánh giá sản phẩm:</h3>
+                <div class="d-flex align-items-center mb-2">
+                    <div class="me-2">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <span>(4.8/5 - 120 đánh giá)</span>
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <label for="userRating" class="form-label">Đánh giá của bạn:</label>
+                        <select class="form-select" id="userRating">
+                            <option value="5">5 sao</option>
+                            <option value="4">4 sao</option>
+                            <option value="3">3 sao</option>
+                            <option value="2">2 sao</option>
+                            <option value="1">1 sao</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userComment" class="form-label">Nhận xét:</label>
+                        <textarea class="form-control" id="userComment" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="showCommentAlert()">Gửi đánh giá</button>
+                </form>
+            </div>
         </div>
 
         <section class="container my-5">
@@ -83,55 +133,78 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card h-100">
-                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
-                            <img src="./assets/items/item-2.png" class="card-img-top" alt="Sản phẩm tương tự 1" style="object-fit: cover; height: 100%; width: 100%;">
+                        <div class="card-img-wrapper">
+                            <img src="./assets/items/electric/ban-phim-gaming.png" class="card-img-top" alt="Tai nghe">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sản phẩm tương tự 1</h5>
-                            <p class="card-text flex-grow-1">Mô tả ngắn gọn về sản phẩm tương tự 1</p>
-                            <p class="card-text"><strong>Giá: 900.000đ</strong></p>
-                            <a href="#" class="btn btn-primary mt-auto">Xem chi tiết</a>
+                            <h5 class="card-title">Bàn phím gaming</h5>
+                            <p class="card-text filter">E-dra</p>
+                            <p class="card-text flex-grow-1">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </p>
+                            <p class="card-text"><strong>Giá: 1.500.000đ</strong></p>
+                            <a href="details.html" class="btn btn-primary mt-auto">Xem chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="./assets/items/fashion/ao-gia-long-cuu-dan-len-mem-co-cao.png" class="card-img-top" alt="Áo thun">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Áo giả lông cừu đan len mềm cổ cao </h5>
+                            <p class="card-text filter">Áo len</p>
+                            <p class="card-text flex-grow-1">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </p>
+                            <p class="card-text"><strong>Giá: 250.000đ</strong></p>
+                            <a href="details.html" class="btn btn-primary mt-auto">Xem chi tiết sản phẩm</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card h-100">
-                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
-                            <img src="./assets/items/item-3.png" class="card-img-top" alt="Sản phẩm tương tự 2" style="object-fit: cover; height: 100%; width: 100%;">
+                        <div class="card-img-wrapper">
+                            <img src="./assets/items/fashion/ao-khoac-long-xanh-duong.png" class="card-img-top" alt="Quần jean">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sản phẩm tương tự 2</h5>
-                            <p class="card-text flex-grow-1">Mô tả ngắn gọn về sản phẩm tương tự 2</p>
-                            <p class="card-text"><strong>Giá: 1.100.000đ</strong></p>
-                            <a href="#" class="btn btn-primary mt-auto">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
-                            <img src="./assets/items/item-4.png" class="card-img-top" alt="Sản phẩm tương tự 3" style="object-fit: cover; height: 100%; width: 100%;">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sản phẩm tương tự 3</h5>
-                            <p class="card-text flex-grow-1">Mô tả ngắn gọn về sản phẩm tương tự 3</p>
-                            <p class="card-text"><strong>Giá: 950.000đ</strong></p>
-                            <a href="#" class="btn btn-primary mt-auto">Xem chi tiết</a>
+                            <h5 class="card-title">Áo khoác lông xanh dương</h5>
+                            <p class="card-text filter">Áo Hoodie</p>
+                            <p class="card-text flex-grow-1">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </p>
+                            <p class="card-text"><strong>Giá: 450.000đ</strong></p>
+                            <a href="details.html" class="btn btn-primary mt-auto">Xem chi tiết sản phẩm</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    
-    
-        <footer class="bg-light py-3 mt-5">
-            <div class="container text-center">
-                <p>&copy; 2024 Cửa hàng Mixi. Tất cả các quyền được bảo lưu.</p>
-            </div>
-        </footer>
+
+
+
     </main>
 
-    
+
+    <footer class="bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Cửa hàng Mixi. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
 
     <script>
         document.getElementById('decrease').addEventListener('click', function () {
@@ -145,6 +218,26 @@
             var quantity = document.getElementById('quantity');
             quantity.value = parseInt(quantity.value) + 1;
         });
+
+        function showCommentAlert() {
+            alert("Cảm ơn bạn đã gửi đánh giá!");
+        }
+
+        function applyVoucher() {
+            const voucherCode = document.getElementById('voucherCode').value;
+            const voucherMessage = document.getElementById('voucherMessage');
+
+            // Giả lập kiểm tra mã giảm giá
+            if (voucherCode === 'SALE10') {
+                voucherMessage.textContent = 'Mã giảm giá đã được áp dụng. Bạn được giảm 10% tổng đơn hàng.';
+                voucherMessage.classList.remove('text-danger');
+                voucherMessage.classList.add('text-success');
+            } else {
+                voucherMessage.textContent = 'Mã giảm giá không hợp lệ hoặc đã hết hạn.';
+                voucherMessage.classList.remove('text-success');
+                voucherMessage.classList.add('text-danger');
+            }
+        }
     </script>
 </body>
 
